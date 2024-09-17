@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+#root {
+  --dd-background: #140D0F;
+  --dd-text: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--dd-background);
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(./assets/Hero_DT.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-attachment: fixed;
+  color: var(--dd-text);
+  position: relative;
+}
+
+.header::after {
+  content:"";
+  background: rgba(0, 0, 0, 0.596);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.header h1 {
+  font-size: 9vw;
+  line-height: 9vw;
+  position: relative;
+  z-index: 100;
+  text-shadow: 0 0 20px rgba(255, 123, 205, 0.425);
+}
+
+.header h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 4.167vw;
+  line-height: 1.2;
+  position: relative;
+  z-index: 100;
+}
+
+.main-nav {
+  background: rgba(255, 255, 255, 0.842);
+  
+}
+
+@media (min-width: 768px) {
+  .header h1 {  
+  font-size: 5.7rem;
+  line-height: 5.7rem;
+  }
+  .header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 991px) {
+  .header h1 {
+    font-size: 95px;
+    line-height: 95px;
+  }
+  .header h2 {
+    font-size: 2rem;
+  }
+}
