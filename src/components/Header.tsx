@@ -1,12 +1,25 @@
 import Navigation from "./Navigation"
 
-const Header = () => {
+const Header = ({post}) => {
     return (
         <header className="header">
             <Navigation />
             <div className="container">
-            <h1>FRONT-END WEB DEVELOPER</h1>
-            <h2 className="">I'm <b>Darrin</b>, an independent <b>front-end developer</b> located in the United States. <b>Building apps</b> and <b>online experiences</b> for large and small businesses.</h2>
+                <h2>{post.acf.page_title_2}</h2>
+                <h1>
+                    {post.acf.page_title}
+                </h1>
+                <h1>
+                    {/* WEB DEVELOPMENT & CONSULTING */}
+                </h1>
+                <h3 className="">
+                {post.acf.page_content}
+                </h3>
+                <div className="btn-grp col-12 col-sm-6 col-md-3">
+                    <a href={post.acf.main_btn_url} className="cta btn btn-main d-block">
+                    {post.acf.main_btn_label}
+                    </a>
+                </div>
             </div>
         </header>
     )
