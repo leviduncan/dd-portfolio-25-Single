@@ -17,7 +17,6 @@ function App() {
       .catch(error => console.error(error));
   }, []);
 
-
   return (
     <>
     {loading ? (<p>Loading...</p>) : ( <Header post={posts}/>)}
