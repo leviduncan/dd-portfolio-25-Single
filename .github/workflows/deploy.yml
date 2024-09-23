@@ -1,16 +1,31 @@
-name: Deploy to Web Server
+name: Deploy to Server
 
+# Trigger this action on every push to the main branch
 on:
   push:
     branches:
-      - main
+      - main # or the branch you want to deploy from
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
-      - name: Run a script
-        run: echo "Hello, World"
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up SSH and deploy the dist folder
+      - name: Deploy dist folder to server
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{ secrets.SSH_SERVER }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22 # default SSH port, change if necessary
+          script: |
+            # Navigate to your dist directory
+            cd dist
+            
+            # Copy the contents of the dist directory to the remote server
+            scp -r * ${{ secrets.SSH_USER }}@${{ secrets.SSH_SERVER }}:/home/brownlea/public_html/darrinduncan

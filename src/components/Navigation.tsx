@@ -1,4 +1,3 @@
-import Menu from './Menu'
 import logo from '../assets/logo.png'
 
 const Navigation = () => {
