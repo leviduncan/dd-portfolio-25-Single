@@ -13,7 +13,7 @@ jobs:
     steps:
       # Step 1: Check out the repository code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       # Step 2: Set up SSH and deploy the dist folder
       - name: Deploy dist folder to server
@@ -22,7 +22,6 @@ jobs:
           host: ${{ secrets.SSH_SERVER }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          target: ${{ secrets.SSH_HOST_TARGET }}
           port: 22 # default SSH port, change if necessary
           script: |
             # Navigate to your dist directory
