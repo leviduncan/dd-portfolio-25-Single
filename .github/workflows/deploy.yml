@@ -22,10 +22,11 @@ jobs:
           host: ${{ secrets.SSH_SERVER }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          target: ${{ secrets.SSH_HOST_TARGET }}
           port: 22 # default SSH port, change if necessary
           script: |
             # Navigate to your dist directory
             cd dist
             
             # Copy the contents of the dist directory to the remote server
-            scp -r * ${{ secrets.SSH_USER }}@${{ secrets.SSH_SERVER }}:/home/brownlea/public_html/darrinduncan
+            scp -r * ${{ secrets.SSH_USER }}@${{ secrets.SSH_SERVER }}:${{ secrets.SSH_HOST_TARGET }}
