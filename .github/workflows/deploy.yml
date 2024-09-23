@@ -7,19 +7,10 @@ on:
 
 jobs:
   deploy:
-    runs-on: linux
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: |
-          npm install
-
-      - name: Build and deploy
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        run: |
-          npm run build
-          ssh -o "StrictHostKeyChecking=no" brownlea@190.92.171.214 "rm -rf /home/brownlea/public_html/darrinduncan/*"
-          rsync -avz --delete dist/ brownlea@190.92.171.214:/home/brownlea/public_html/darrinduncan/
+      - name: Run a script
+        run: echo "Hello, World"
