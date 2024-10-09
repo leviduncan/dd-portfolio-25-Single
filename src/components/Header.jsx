@@ -7,11 +7,11 @@ const HeaderContent = ({ post }) => {
     <header className="header">
       <Navigation />
       <div className="container">
-         <h2>{post.acf.page_title_2}</h2>
-        <h1>{post.acf.page_title}</h1>
-        <h3>{post.acf.page_content}</h3>
+         <h2 className="fade-in-left">{post.acf.page_title_2}</h2>
+        <h1 className="fade-in">{post.acf.page_title}</h1>
+        <h3 className="fade-in">{post.acf.page_content}</h3>
         <div className="btn-grp col-12 col-sm-6 col-md-3 d-none d-sm-block">
-          <a href={post.acf.main_btn_url} className="cta btn btn-main d-block" >
+          <a href={post.acf.main_btn_url} className="cta btn btn-main d-block fade-in-top" >
             {post.acf.main_btn_label}
           </a>
         </div> 

@@ -6,7 +6,7 @@ const Projects = () => {
             <div className="container">
                 <h2>Projects</h2>
                 <p>Here are some of the projects I've worked on:</p>
-                <div className="d-flex gap-4">
+                <div className="d-flex flex-column flex-lg-row justify-content-center gap-4 project-group">
                     <div className="card">
                         <img src={ecomm} className="card-img-top" alt="project1" />
                         <div className="card-body">
