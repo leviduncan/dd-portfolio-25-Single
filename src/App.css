@@ -7,7 +7,7 @@
   --dd-gray1: #2e2e2e;
   --dd-text: #fff;
   --dd-2nd: #FB2156;
-  --dd-2nd-hover: #c4113d;
+  --dd-2nd-hover: #8f0a2b;
   --dd-text2: #efe1f0;
   --dd-text3: rgb(218, 169, 219);
 }
@@ -134,7 +134,6 @@ img {
 .header h2 {
   font-weight: 400;
   font-size: 4.167vw;
-  font-weight: 900;
   line-height: 1.2;
   position: relative;
   z-index: 10;
@@ -162,21 +161,23 @@ strong {
 .btn-grp  {
   position: relative;
   z-index: 10;
-  margin-top: 20px;
+  width: 100%;
+  flex-direction: column;
 }
 
 .cta {
   border-radius: 50px;
-  padding: 16px;
-  margin: 2rem 0;
-  font-size: 1.3rem;
+  padding: 10px 16px;
+  margin: 0;
+  font-size: 1rem;
+  display: flex;
 }
 
 .btn-main {
   background-color: var(--dd-2nd);
   color: var(--dd-text);
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
 }
 
@@ -189,13 +190,28 @@ strong {
   background-color: var(--dd-text);
   color: var(--dd-background);
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 7900;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
 }
 
 .btn-call:hover {
   background-color: var(--dd-text3);
   color: var(--dd-background);
+  box-shadow: unset;
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: var(--dd-text);
+  border: solid 1px var(--dd-text);
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
+}
+
+.btn-outlined:hover {
+  background-color: var(--dd-text);
+  color: var(--dd-background3);
   box-shadow: unset;
 }
 
@@ -215,20 +231,69 @@ strong {
   padding: 16px 8px;
 }
 
-
-.main-nav {
-  background: rgba(255, 255, 255, 0.842);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 100%;
+.bottom-menu {
+  color: #fff;
+  background: var(--dd-2nd);
+  border-radius: unset;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 100%;
+  display: flex;
+  z-index: 50;
+  padding: 16px 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
 }
 
-.fixed-top {
+.bottom-menu a {
+  color: #fff;
+  font-size: 1.8rem;
+}
+.menu {
+  color: var(--dd-text);
+  font-size: 1.8rem;
+}
+
+.navigation .fixed-top {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2000;
+  top: 20px;
+  /* right: 0;
+  left: 0; */
+  max-width: 1320px;
+  width: 90%;
+  z-index: 100;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.212);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  border: solid 1px #7e7e7e50;
+}
+
+.navigation .fixed-top a {
+  color: var(--dd-text);
+  text-transform: uppercase;
+}
+.navigation .fixed-top a:hover {
+  color: var(--dd-text);
+  text-decoration: underline;
+}
+
+.navigation .offcanvas .menu2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation .offcanvas .menu2 a {
+  color: var(--dd-background3);
+  text-transform: uppercase;
+  border-bottom: solid 1px var(--dd-background3);
+  padding: 10px;
+}
+.navigation .offcanvas .menu2 a:hover {
+  background: var(--dd-text2);
 }
 
 section .container {
@@ -305,6 +370,7 @@ section .container {
 }
 .skills h4{
   color: var(--dd-background2);
+  font-size: 1.4rem;
 }
 
 .skills-content {
@@ -323,8 +389,8 @@ section .container {
 }
 
 .skills .tech-stack {
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
 }
 
 .skills .tech-stack:hover {
@@ -334,24 +400,40 @@ section .container {
 
 /* Projects */
 .projects {
-  background: var(--dd-gray1);
+  background: var(--dd-background);
   color: var(--dd-background2);
 }
+/* .projects {
+  background: url('https://darrin-duncan.com/wp-content/uploads/2024/08/daniel-korpai-HyTwtsk8XqA-unsplash-scaled.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--dd-background2);
+} */
 
 .projects h2, .projects p {
   color: var(--dd-text);
 }
 
-.project-group {
+.projects .card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .projects .card {
-  min-width: 18rem;
-  width: 100%;
-  background-color: unset;
-  border: unset;
-  color: white;
-}
+  flex-basis: calc(33.33% - 20px);
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+} 
+.projects .card-body {
+  flex-basis: calc(33.33% - 20px);
+  padding: 20px;
+  color: var(--dd-text)
+} 
 
 .projects .card-img-top {
   border-radius: 10px;
@@ -361,6 +443,14 @@ section .container {
   padding: 1rem 0;
 }
 
+/* .projects .glass {
+  background: rgba(39, 39, 39, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: solid 1px rgba(119, 119, 119, 0.137);
+
+} */
 
 /* Footer */
 
@@ -597,6 +687,11 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .projects .card {
+    flex-basis: 100%;
+  }
+}
 
 
 @media (min-width: 768px) {
@@ -610,8 +705,24 @@ footer {
     font-size: 2rem;
   }
 
+  .btn-grp {
+    flex-direction: row;
+  }
+
   .cta {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+  margin: 2rem 0;
+  }
+
+  .skills h4{
+    font-size: 1.6vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects .card {
+    flex-basis: calc(50% - 20px);
   }
 }
 
@@ -626,4 +737,10 @@ footer {
     font-size: 3rem;
   }
 
+}
+
+@media (min-width: 1025px) {
+  .projects .card {
+    flex-basis: calc(33.33% - 20px);
+  }
 }

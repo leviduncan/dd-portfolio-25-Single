@@ -1,22 +1,10 @@
 const Menu = () => {
   return (
-    <ul className="navbar-nav ms-auto">
-        <li className="nav-item">
-          <a className="nav-link" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">About</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Services</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Projects</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
+    <div className="menu2 gap-3 d-flex">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Tech Stack</a>
+    </div>
   )
 }
 

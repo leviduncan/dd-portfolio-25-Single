@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Loading from './Loading';
-import { FaArrowRightLong } from "react-icons/fa6";
 
 const AboutContent = ({ post }) => {
 
@@ -9,7 +8,7 @@ const AboutContent = ({ post }) => {
 
     return (
 
-        <section className="about py-5 py-md-5">
+        <section className="about py-5 py-md-5" id="about">
             <div className="container">
                 <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
                     <div className="col-12 col-lg-6 col-xl-5">
@@ -20,11 +19,11 @@ const AboutContent = ({ post }) => {
                             <div className="col-12 col-xl-11">
                                 <h2 className="mb-3">Who Am I?</h2>
                                 <p className="lead fs-4  mb-3">{post.acf.page_content}</p>
-                                <div className="btn-grp col-12 col-sm-6 d-flex">
-                                    <a href={post.acf.main_btn_url} className="d-block" >
-                                        {post.acf.main_btn_label} <FaArrowRightLong />
+                                <div className="btn-grp col-12 col-sm-6 d-flex gap-3">
+                                    <a href={post.acf.main_btn_url} className="d-block btn btn-main cta" >
+                                        {post.acf.main_btn_label}
                                     </a>
-                                    <button type="button">LinkedIn Profile</button>
+                                    <button type="button" className="btn btn-outlined cta"><i class="bi bi-linkedin"></i> LinkedIn</button>
                                 </div>
                             </div>
                         </div>

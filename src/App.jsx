@@ -7,12 +7,14 @@ import Projects from './components/Projects';
 
 function App() {
 const url = 'https://darrin-duncan.com/wp-json/wp/v2/pages';
+const projectsUrl = 'https://darrin-duncan.com/wp-json/wp/v2/project'
+const skillsUrl = 'https://darrin-duncan.com/wp-json/wp/v2/skill'
   return (
     <>
       <Header url={url} />
       <About url={url} />
-      <Projects url={url} />
-      <Skills url={url} />
+      <Projects url={projectsUrl} />
+      <Skills url={skillsUrl} />
       <Footer url={url} />
     </>
   );
