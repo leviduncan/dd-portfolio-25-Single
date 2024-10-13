@@ -34,11 +34,13 @@ const Skills = ({ url }) => {
                 <h2 className="text-center mb-5">Tech Stack</h2>
                 <div className="container">
                     <div className="gap-4 gap-sm-3 m-auto d-flex flex-row-reverse flex-wrap">
-                    {
-                        post.map((item, index) => (
-                            <div key={index} className="tech-stack text-bg-light gap-2"><h4 className=" col-6 col-sm-4 col-md-3">{item.acf.name}</h4></div>
-                        ))
-                    }
+                        {
+                            post.map((item, index) => (
+                                <div key={index} className="tech-stack gap-2">
+                                    <h4 className=" col-6 col-sm-4 col-md-3">{item.acf.name}</h4>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

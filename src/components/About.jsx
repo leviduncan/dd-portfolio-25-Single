@@ -12,7 +12,9 @@ const AboutContent = ({ post }) => {
             <div className="container">
                 <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
                     <div className="col-12 col-lg-6 col-xl-5">
+                        <div className="img-wrapper">
                         <img className="img-fluid rounded-4 portrait fade-in-top" loading="lazy" src={mug} alt="About 1" />
+                        </div>
                     </div>
                     <div className="col-12 col-lg-6 col-xl-7 fade-in-right">
                         <div className="row justify-content-xl-center">
@@ -23,7 +25,7 @@ const AboutContent = ({ post }) => {
                                     <a href={post.acf.main_btn_url} className="d-block btn btn-main cta" >
                                         {post.acf.main_btn_label}
                                     </a>
-                                    <button type="button" className="btn btn-outlined cta"><i class="bi bi-linkedin"></i> LinkedIn</button>
+                                    <a href="https://www.linkedin.com/in/darrinduncan/" target="_blank" className="btn btn-outlined cta"><i className="bi bi-linkedin"></i> LinkedIn</a>
                                 </div>
                             </div>
                         </div>

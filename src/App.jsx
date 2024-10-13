@@ -1,22 +1,21 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import About from './components/About';
-import Skills from './components/Skills';
-import Footer from './components/Footer';
-import Projects from './components/Projects';
+import Home from './pages/Home';
+import Project from './pages/Project';
+import Navigation from './components/Navigation';
 
 function App() {
-const url = 'https://darrin-duncan.com/wp-json/wp/v2/pages';
-const projectsUrl = 'https://darrin-duncan.com/wp-json/wp/v2/project'
-const skillsUrl = 'https://darrin-duncan.com/wp-json/wp/v2/skill'
   return (
-    <>
-      <Header url={url} />
-      <About url={url} />
-      <Projects url={projectsUrl} />
-      <Skills url={skillsUrl} />
-      <Footer url={url} />
-    </>
+    <BrowserRouter>
+    <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} /> */}
+        <Route path="/project" element={<Project />} />
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 

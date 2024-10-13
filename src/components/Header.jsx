@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react';
-import Navigation from "./Navigation";
 import Loading from './Loading';
-import Menu from './Menu';
 
 const HeaderContent = ({ post }) => {
   return (
     <header className="header">
-      <Navigation />
       <div className="container">
         <h2 className="fade-in-left">{post.acf.page_title_2}</h2>
         <h1 className="fade-in">{post.acf.page_title}</h1>
@@ -18,13 +15,12 @@ const HeaderContent = ({ post }) => {
           </a>
         </div>
         </div>
-
       </div>
       <div className="bottom-menu d-flex d-md-none justify-content-around">
         <a href="#about"><i className="bi bi-person-circle"></i></a>
         <a href="#projects"><i className="bi bi-brush"></i></a>
         <a href="#skills"><i className="bi bi-code-slash"></i></a>
-        <a href="#skills"><i className="bi bi-person-lines-fill"></i></a>
+        <a href="#contact"><i className="bi bi-person-lines-fill"></i></a>
       </div>
     </header>
   );
