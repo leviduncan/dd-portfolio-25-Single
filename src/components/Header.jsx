@@ -5,15 +5,15 @@ const HeaderContent = ({ post }) => {
   return (
     <header className="header">
       <div className="container">
-        <h2 className="fade-in-left">{post.acf.page_title_2}</h2>
-        <h1 className="fade-in">{post.acf.page_title}</h1>
-        <h3 className="fade-in">{post.acf.page_content}</h3>
+        <h2 className="fade-in-left mb-3">{post.acf.page_title_2}</h2>
+        <h1 className="fade-in mb-4">{post.acf.page_title}</h1>
+        <p className="fade-in mb-4">{post.acf.page_content}</p>
         <div className="row">
-        <div className="btn-grp d-none d-sm-block col-12 col-sm-6 col-md-3">
-          <a href={post.acf.main_btn_url} className="cta btn btn-main d-block fade-in-top  " >
-            {post.acf.main_btn_label}
-          </a>
-        </div>
+          <div className="btn-grp d-none d-md-block col-12 col-sm-6 col-md-3">
+            <a href={post.acf.main_btn_url} className="cta btn btn-main d-block fade-in-top  " >
+              {post.acf.main_btn_label}
+            </a>
+          </div>
         </div>
       </div>
       <div className="bottom-menu d-flex d-md-none justify-content-around">

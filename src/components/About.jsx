@@ -8,26 +8,22 @@ const AboutContent = ({ post }) => {
 
     return (
 
-        <section className="about py-5 py-md-5" id="about">
+        <section className="about py-5" id="about">
             <div className="container">
-                <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
-                    <div className="col-12 col-lg-6 col-xl-5">
-                        <div className="img-wrapper">
-                        <img className="img-fluid rounded-4 portrait fade-in-top" loading="lazy" src={mug} alt="About 1" />
+                <div className="d-flex flex-column flex-md-row">
+                    <div className="col-12 col-md-6 col-lg-5">
+                        <div className="img-wrapper m-auto">
+                            <img className="img-fluid rounded-4 portrait fade-in-top" loading="lazy" src={mug} alt="About Darrin Duncan" />
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 col-xl-7 fade-in-right">
-                        <div className="row justify-content-xl-center">
-                            <div className="col-12 col-xl-11">
-                                <h2 className="mb-3">Who Am I?</h2>
-                                <p className="lead fs-4  mb-3">{post.acf.page_content}</p>
-                                <div className="btn-grp col-12 col-sm-6 d-flex gap-3">
-                                    <a href={post.acf.main_btn_url} className="d-block btn btn-main cta" >
-                                        {post.acf.main_btn_label}
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/darrinduncan/" target="_blank" className="btn btn-outlined cta"><i className="bi bi-linkedin"></i> LinkedIn</a>
-                                </div>
-                            </div>
+                    <div className="d-flex flex-column col-12 col-md-6 col-lg-7 justify-content-xl-center p-4">
+                        <h2 className="mb-3">Who Am I?</h2>
+                        <p className="mb-3">{post.acf.page_content}</p>
+                        <div className="btn-grp col-12 d-flex gap-3 flex-column flex-xl-row">
+                            <a href={post.acf.main_btn_url} className="d-none d-md-block btn btn-main cta" >
+                                {post.acf.main_btn_label}
+                            </a>
+                            <a href="https://www.linkedin.com/in/darrinduncan/" target="_blank" className="btn btn-outlined cta"><i className="bi bi-linkedin"></i> LinkedIn</a>
                         </div>
                     </div>
                 </div>

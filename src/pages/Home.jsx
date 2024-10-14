@@ -13,8 +13,8 @@ const Home = () => {
         <>
             <Header url={url} />
             <About url={url} />
-            <Projects url={projectsUrl} />
             <Skills url={skillsUrl} />
+            <Projects url={projectsUrl} />
             <Footer url={url} />
         </>
     )
