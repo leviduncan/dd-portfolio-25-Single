@@ -12,10 +12,10 @@ const Home = () => {
     return (
         <>
             <Header url={url} />
-            <About url={url} />
+             <About url={url} />
             <Skills url={skillsUrl} />
             <Projects url={projectsUrl} />
-            <Footer url={url} />
+            {/*<Footer url={url} /> */}
         </>
     )
 }

@@ -2,7 +2,7 @@
 
 #root {
   --dd-background: #1d011d;
-  --dd-background2: #070507;
+  --dd-background2: #360832;
   --dd-background3: #080008;
   --dd-gray1: #2e2e2e;
   --dd-color: #fff;
@@ -32,38 +32,32 @@ h1 {
 }
 
 h2 {
-  font-size: 56px;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+  font-size: 1.2rem;
   font-weight: 700;
-  font-style: normal;
-  color: var(--dd-color);
-}
-
-h2 {
-  font-size: 48px;
-  line-height: 54px;
+  line-height: 2;
+  text-transform: uppercase;
+  color: var(--dd-2nd);
 }
 
 h3 {
-  font-size: 22px;
-  line-height: 26px;
-  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: var(--dd-color2);
+  text-transform: capitalize;
+}
+h3 strong{
+  font-weight: 700;
+  color: var(--dd-color);
 }
 
 body {
-  background-color: var(--dd-background);
-  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(45deg, var(--dd-background), var(--dd-background2));
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
+  line-height: 1.2;
   color: var(--dd-font-color);
 }
 
@@ -78,8 +72,6 @@ p {
 }
 
 .img-wrapper {
-  border-radius: 28px;
-  border: solid 10px rgba(92, 10, 72, 0.329);
   overflow: hidden;
 }
 
@@ -90,6 +82,54 @@ img:hover {
 
 img {
   width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  padding: 40px;
+}
+
+.grid-item {
+  background-color: var(--dd-background3);
+  border: 1px solid var(--dd-background3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.grid-item:hover {
+  background-color: var(--dd-background2);
+  scale: 1.05;
+  border: 1px solid #fff;
+}
+
+.grid-item:first-child {
+  grid-column: 1 / 2;
+  scale: unset;
+  background-color: var(--dd-background);
+  border: none;
+  text-align: left;
+}
+
+.grid-item:first-child h2 {
+  color: var(--dd-2nd);
+}
+
+.grid-item h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .b-shadow {
@@ -188,8 +228,11 @@ strong {
   flex-direction: column;
 }
 
+.btn {
+  border-radius: 0;
+}
+
 .cta {
-  border-radius: 50px;
   padding: 10px 16px;
   margin: 0;
   font-size: 1rem;
@@ -280,18 +323,19 @@ strong {
   font-size: 1.8rem;
 }
 
-.navigation .fixed-top {
+.navigation {
   position: fixed;
-  top: 20px;
-  max-width: 1320px;
-  width: 80%;
   z-index: 100;
+}
+
+.navigation .fixed-top {
+  top: 0;
   margin: auto;
-  background: rgba(255, 255, 255, 0.103);
+  background: rgba(255, 255, 255, 0.021);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 50px;
-  border: solid 1px #7e7e7e50;
+  border-radius: 0;
+  border-bottom: solid 1px #7e7e7e50;
 }
 
 .navigation .fixed-top a {
@@ -377,11 +421,22 @@ section .container {
 
 .about {
   color: var(--dd-color);
-  background: var(--dd-background);
-  border-top: solid 1px rgba(255, 255, 255, 0.089);
+  background-color: var(--dd-background2);
 }
 
+.about .left {
+  background: url('./assets/Silver-Laptop.jpg');
+  background-size: cover;
+  min-height: 300px;
+}
 
+.about img:hover{
+  scale: unset;
+}
+
+.about .content {
+  padding: 50px 0;
+}
 
 .portrait {
   max-width: 350px;
@@ -394,16 +449,13 @@ section .container {
   width: 80%;
 }
 
-.about .img-wrapper {
-  scale: .8;
-  width: 350px;
-}
 
 /* Skills */
 
 .skills {
   background: var(--dd-background);
   min-height: 50vh;
+  padding: 200px 0;
 }
 
 .skills h4 {
@@ -438,9 +490,15 @@ section .container {
 } */
 
 /* Projects */
-.projects {
+.projects, .project {
   background: var(--dd-background);
   color: var(--dd-font-color);
+}
+
+.project {
+  background: var(--dd-background);
+  padding-top: 100px;
+  min-height: 100vh;
 }
 
 /* .projects {
@@ -774,6 +832,14 @@ footer {
 
 @media (min-width: 768px) {
 
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / 3;
+  }
+
   .header h1 {
     font-size: 3.6rem;
     line-height: 3.6rem;
@@ -793,6 +859,10 @@ footer {
     margin: 0;
   }
 
+  .about .left {
+    object-fit: cover;
+  }
+
   .skills h4 {
     font-size: 1rem;
   }
@@ -806,6 +876,9 @@ footer {
 
 @media (min-width: 991px) {
 
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .header h1 {
     font-size: 5rem;
     line-height: 5rem;
@@ -831,6 +904,10 @@ footer {
 }
 
 @media (min-width: 1200px) {
+  
+.grid-container {
+  grid-template-columns: repeat(4, 1fr);
+}
   .header .cta {
     font-size: 1.4rem;
     width: 20%;

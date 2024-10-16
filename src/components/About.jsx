@@ -3,28 +3,21 @@ import Loading from './Loading';
 
 const AboutContent = ({ post }) => {
 
-    const page_image = 'https://darrin-duncan.com/wp-content/uploads/2024/09/Silver-Laptop.jpg'
-    const mug = 'https://darrin-duncan.com/wp-content/uploads/2024/09/mug.jpg'
-
     return (
 
-        <section className="about py-5" id="about">
-            <div className="container">
-                <div className="d-flex flex-column flex-md-row">
-                    <div className="col-12 col-md-6 col-lg-5">
-                        <div className="img-wrapper m-auto">
-                            <img className="img-fluid rounded-4 portrait fade-in-top" loading="lazy" src={mug} alt="About Darrin Duncan" />
-                        </div>
-                    </div>
-                    <div className="d-flex flex-column col-12 col-md-6 col-lg-7 justify-content-xl-center p-4">
-                        <h2 className="mb-3">Who Am I?</h2>
-                        <p className="mb-3">{post.acf.page_content}</p>
-                        <div className="btn-grp col-12 d-flex gap-3 flex-column flex-xl-row">
-                            <a href={post.acf.main_btn_url} className="d-none d-md-block btn btn-main cta" >
-                                {post.acf.main_btn_label}
-                            </a>
-                            <a href="https://www.linkedin.com/in/darrinduncan/" target="_blank" className="btn btn-outlined cta"><i className="bi bi-linkedin"></i> LinkedIn</a>
-                        </div>
+        <section className="about d-flex flex-column flex-md-row" id="about">
+            <div className="left col-12 col-md-6"></div>
+            <div className="d-flex align-items-center p-5">
+                <div className="content" >
+                    <h2 className="mb-3">About Me</h2>
+                    <h3 className="mb-4">Empowering <strong>Digital Excellence</strong> Through <strong>Innovative Design</strong> and <strong>Development</strong></h3>
+                    <p className="mb-3">I'm passionate about revolutionizing digital experiences by harnessing the power of cutting-edge technologies and expertise. With a strong foundation in modern web development, spanning JavaScript, HTML5, CSS3, and React, I've established myself as a trusted partner for businesses seeking to thrive in today's digital landscape.</p>
+                    <p className="mb-5">My journey began with a vision to redefine the standards of excellence in web design and development, blending intuitive user experiences with seamless technical integration. Since then, I've continuously evolved and adapted to meet the ever-changing needs of my clients, staying at the forefront of industry trends and emerging technologies.</p>
+                    <div className="btn-grp col-12 d-flex gap-3 flex-column flex-xl-row">
+                        <a href={post.acf.main_btn_url} className="d-none d-md-block btn btn-main cta" >
+                            {post.acf.main_btn_label}
+                        </a>
+                        <a href="https://www.linkedin.com/in/darrinduncan/" target="_blank" className="btn btn-outlined cta"><i className="bi bi-linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
             </div>

@@ -1,63 +1,30 @@
 import { useState, useEffect } from 'react';
 import Loading from './Loading';
+import frontendTechnologies from './frontEndTechnologies';
 
 const Skills = ({ url }) => {
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [post, setPost] = useState(null);
+    const [post, setPost] = useState(frontendTechnologies);
 
-    useEffect(() => {
-        const fetchPostData = async () => {
-            try {
-                const response = await fetch(`${url}`);
-                const data = await response.json();
-                setPost(data);
-                console.log(data);
-                setLoading(false);
-            } catch (error) {
-                console.error(error);
-                setError(error.message);
-                setLoading(false);
-            }
-        };
-
-        fetchPostData();
-    }, []);
-
-    if (loading) return <Loading />;
-    if (error) return <p>Error: {error}</p>;
-    if (!post) return null;
 
     return (
-        <section className="skills py-3 py-md-5" id="skills">
+        <section className="skills" id="skills">
             <div className="container">
-                <h2 className="text-center mb-5 fade-in">Tech Stack</h2>
-
-                <div className="container d-flex flex-column flex-md-row">
-                    <div className="d-flex flex-wrap-reverse col-12 col-md-6 gap-2 fade-in-left">
-                        {
-                            post.map((item, index) => (
-                                <div key={index} className="tech-stack">
-                                    <h4 className="col-6">{item.acf.name}</h4>
-                                </div>
-                            ))
-                        }
+                <div className="grid-container">
+                    <div className="grid-item">
+                    <h3 className="mb-5 fade-in ">
+                    <h2 className="fade-in">Tech Stack</h2>Leveraging <strong>industry-leading</strong> technologies to <strong>create</strong> seamless, <strong>interactive</strong>, and <strong>visually stunning</strong> web applications.</h3>
                     </div>
-                    <div className="container overflow-hidden col-12 col-md-6 fade-in-right">
-                        <div className="img-wrapper">
-                            <img src="https://darrin-duncan.com/wp-content/uploads/2024/09/web-img-13-scaled.jpg" alt="" className="" loading='lazy' />
-                        </div>
-                    </div>
-                    {/* <div className="gap-4 gap-sm-3 m-auto d-flex flex-row-reverse flex-wrap">
-                        {
-                            post.map((item, index) => (
-                                <div key={index} className="tech-stack gap-2">
-                                    <h4 className=" col-6 col-sm-4 col-md-3">{item.acf.name}</h4>
-                                </div>
-                            ))
-                        }
-                    </div> */}
+                    {
+                        post.map((item, index) => (
+                            <div key={index} className="grid-item fade-in">
+                                <h2 className="">{item.icon} {item.name}</h2>
+                                <p className="col">{item.description}</p>
+                            </div>
+                        ))
+                    }
                 </div>
+
+
             </div>
         </section>
     )

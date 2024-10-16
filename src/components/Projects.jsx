@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
         />
       </div>
       <div className="card-body">
-        <a href={`/Project/${project.id}`}>
+        <a href={`/project/${project.id}`}>
           <h3 className="card-title">{project.acf?.name}</h3>
         </a>
         <p className="card-text">{project.acf?.excerpt}</p>
@@ -32,6 +32,7 @@ const Projects = ({ url }) => {
         const response = await fetch(`${url}`);
         const data = await response.json();
         setPosts(data);
+        console.log(data)
         setLoading(false);
       } catch (error) {
         console.error(error);
