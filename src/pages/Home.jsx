@@ -8,14 +8,13 @@ import Projects from '../components/Projects';
 const Home = () => {
     const url = 'https://darrin-duncan.com/wp-json/wp/v2/pages';
     const projectsUrl = 'https://darrin-duncan.com/wp-json/wp/v2/project'
-    const skillsUrl = 'https://darrin-duncan.com/wp-json/wp/v2/skill'
     return (
         <>
             <Header url={url} />
              <About url={url} />
-            <Skills url={skillsUrl} />
+            <Skills />
             <Projects url={projectsUrl} />
-            {/*<Footer url={url} /> */}
+            <Footer url={url} />
         </>
     )
 }

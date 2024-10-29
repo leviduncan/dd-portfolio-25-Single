@@ -463,15 +463,17 @@ section .container {
 
 .skills {
   background: var(--dd-background);
-  min-height: 50vh;
   padding: 50px 0;
 }
 
-.skills h4 {
+.skills h3 {
+  font-weight: 400;
+}
+
+.skills h4, .projects h4 {
   color: var(--dd-color);
   font-size: .8rem;
   font-weight: 400;
-
 }
 
 .skills-content {
@@ -490,6 +492,47 @@ section .container {
 .skills .tech-stack {
   padding: 10px 30px;
   background: rgba(0, 0, 0, 0.301);
+  max-width: 850px;
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+.skills .skill-items {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  position: relative;
+}
+
+.skills .skill-items:before,
+.skills .skill-items:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  background: linear-gradient(to right, #fff, transparent);
+  z-index: 1;
+}
+
+.skills .skill-items::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+.skills .skill-items::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+.skills .skill-items .skill-card{
+  transition: transform 0.2s ease-in-out;
+}
+.skills .skill-items .skill-card p{
+  font-size: 12px;
+  color: var(--dd-color3);
+}
+.skills .skill-items .skill-card svg{
+  color: var(--dd-color3);
 }
 /* 
 .skills .tech-stack:hover {
@@ -500,14 +543,12 @@ section .container {
 
 /* Projects */
 .projects, .project {
-  background: var(--dd-background);
-  color: var(--dd-font-color);
+  background: var(--dd-background2);
 }
 
 .project {
   background: var(--dd-background);
-  padding-top: 100px;
-  min-height: 100vh;
+  padding-top: 50px;
 }
 
 /* .projects {
@@ -519,10 +560,6 @@ section .container {
   color: var(--dd-background2);
 } */
 
-.projects h2,
-.projects p {
-  color: var(--dd-color);
-}
 
 .projects .card-grid {
   display: flex;
@@ -545,11 +582,16 @@ section .container {
 }
 
 .projects .card-img-top {
-  border-radius: 10px;
+  border-radius: 0;
+}
+
+.projects .card-title {
+  font-size: 20px;
 }
 
 .projects .card-body {
-  padding: 1rem 0;
+  padding: 1rem;
+  background-color: var(--dd-background);
 }
 
 /* .projects .glass {
@@ -565,8 +607,14 @@ section .container {
   height: 200px;
 }
 
+.projects .btn span {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: none;
+}
+
 img:hover {
-  scale: 1.2;
+  scale: 1.1;
 }
 
 /* Footer */
