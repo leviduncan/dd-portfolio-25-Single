@@ -10,7 +10,7 @@ const HeaderContent = ({ post }) => {
         <p className="fade-in mb-4">{post.acf.page_content}</p>
         <div className="row">
           <div className="btn-grp d-none d-md-block col-12 col-sm-6 col-md-3">
-            <a href={post.acf.main_btn_url} className="cta btn btn-main d-block fade-in-top  " >
+            <a href="mailto:darrin@darrinduncan.com" className="cta btn btn-main d-block fade-in-top  " >
               {post.acf.main_btn_label}
             </a>
           </div>
@@ -20,7 +20,8 @@ const HeaderContent = ({ post }) => {
         <a href="#about"><i className="bi bi-person-circle"></i></a>
         <a href="#projects"><i className="bi bi-brush"></i></a>
         <a href="#skills"><i className="bi bi-code-slash"></i></a>
-        <a href="#contact"><i className="bi bi-person-lines-fill"></i></a>
+        <a href="tel:570-200-5552"><i className="bi bi-telephone"></i></a>
+        <a href="mailto:darrin@darrinduncan.com"><i className="bi bi-person-lines-fill"></i></a>
       </div>
     </header>
   );

@@ -54,6 +54,7 @@ h3 strong{
 body {
   background: linear-gradient(45deg, var(--dd-background), var(--dd-background2));
   font-family: "Roboto", sans-serif;
+  font-size: 18px;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -93,7 +94,7 @@ img {
 
 .grid-item {
   background-color: var(--dd-background3);
-  border: 1px solid var(--dd-background3);
+  border: 1px solid var(--dd-gray1);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -103,7 +104,6 @@ img {
 
 .grid-item:hover {
   background-color: var(--dd-background2);
-  scale: 1.05;
   border: 1px solid #fff;
 }
 
@@ -128,7 +128,6 @@ img {
 
 .grid-item p {
   color: #ccc;
-  font-size: 14px;
   margin-bottom: 20px;
 }
 
@@ -207,7 +206,6 @@ img {
 
 .header p {
   font-weight: 400;
-  font-size: 1rem;
   line-height: 1.4;
   position: relative;
   z-index: 10;
@@ -428,6 +426,17 @@ section .container {
   background: url('./assets/Silver-Laptop.jpg');
   background-size: cover;
   min-height: 300px;
+  position: relative;
+}
+
+.about .left:before {
+  content: "";
+  position: absolute;
+  background:#d600d61a;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .about img:hover{
@@ -455,7 +464,7 @@ section .container {
 .skills {
   background: var(--dd-background);
   min-height: 50vh;
-  padding: 200px 0;
+  padding: 50px 0;
 }
 
 .skills h4 {
@@ -861,6 +870,10 @@ footer {
 
   .about .left {
     object-fit: cover;
+  }
+
+  .skills {
+    padding: 200px 0;
   }
 
   .skills h4 {

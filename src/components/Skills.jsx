@@ -11,8 +11,9 @@ const Skills = ({ url }) => {
             <div className="container">
                 <div className="grid-container">
                     <div className="grid-item">
-                    <h3 className="mb-5 fade-in ">
-                    <h2 className="fade-in">Tech Stack</h2>Leveraging <strong>industry-leading</strong> technologies to <strong>create</strong> seamless, <strong>interactive</strong>, and <strong>visually stunning</strong> web applications.</h3>
+                        <h2 className="fade-in">Tech Stack</h2>
+                        <h3 className="mb-5 fade-in ">Leveraging <strong>industry-leading</strong> technologies to <strong>create</strong> seamless, <strong>interactive</strong>, and <strong>visually stunning</strong> web applications.
+                        </h3>
                     </div>
                     {
                         post.map((item, index) => (
