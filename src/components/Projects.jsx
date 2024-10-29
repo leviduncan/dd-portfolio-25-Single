@@ -12,9 +12,9 @@ const ProjectCard = ({ project }) => {
         />
       </div>
       <div className="card-body">
-        <a href={`/project/${project.id}`}>
           <h3 className="card-title">{project.acf?.name}</h3>
-        </a>
+        {/* <a href={`/project/${project.id}`}>
+        </a> */}
         <p className="card-text">{project.acf?.excerpt}</p>
       </div>
     </div>
