@@ -554,21 +554,6 @@ section .container {
   background: var(--dd-background2);
 }
 
-.project {
-  background: var(--dd-background);
-  padding-top: 50px;
-}
-
-/* .projects {
-  background: url('https://darrin-duncan.com/wp-content/uploads/2024/08/daniel-korpai-HyTwtsk8XqA-unsplash-scaled.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: var(--dd-background2);
-} */
-
-
 .projects .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -639,21 +624,21 @@ section .container {
 
 .projects .card-body {
   flex-basis: calc(33.33% - 20px);
-  color: var(--dd-color);
+  color: var(--dd-background3);
   padding: 1rem;
   text-align: center;
-  background-color: transparent;
+  background-color: var(--dd-color);
 }
 
 .projects .btn, .projects .btn-main {
   background-color: unset;
   box-shadow: unset;
+  color: var(--dd-color2-trans);
 }
 
 
 .projects .img-wrapper {
   height: 160px;
-  border: solid 1px var(--dd-gray1);
 }
 
 .projects .card img {
