@@ -4,12 +4,13 @@
   --dd-background: #1d011d;
   --dd-background2: #360832;
   --dd-background3: #080008;
-  --dd-gray1: #2e2e2e;
+  --dd-gray1: #1d1d1d;
   --dd-color: #fff;
   --dd-font-color: #ccc;
   --dd-2nd: #FB2156;
   --dd-2nd-hover: #8f0a2b;
   --dd-color2: #efe1f0;
+  --dd-color2-trans: #6d6d6db9;
   --dd-color3: rgb(218, 169, 219);
 }
 
@@ -46,7 +47,8 @@ h3 {
   color: var(--dd-color2);
   text-transform: capitalize;
 }
-h3 strong{
+
+h3 strong {
   font-weight: 700;
   color: var(--dd-color);
 }
@@ -432,14 +434,14 @@ section .container {
 .about .left:before {
   content: "";
   position: absolute;
-  background:#d600d61a;
+  background: #d600d61a;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-.about img:hover{
+.about img:hover {
   scale: unset;
 }
 
@@ -470,7 +472,8 @@ section .container {
   font-weight: 400;
 }
 
-.skills h4, .projects h4 {
+.skills h4,
+.projects h4 {
   color: var(--dd-color);
   font-size: .8rem;
   font-weight: 400;
@@ -519,21 +522,25 @@ section .container {
   left: 0;
   background: linear-gradient(to right, #fff, transparent);
 }
+
 .skills .skill-items::after {
   right: 0;
   background: linear-gradient(to left, #fff, transparent);
 }
 
-.skills .skill-items .skill-card{
+.skills .skill-items .skill-card {
   transition: transform 0.2s ease-in-out;
 }
-.skills .skill-items .skill-card p{
+
+.skills .skill-items .skill-card p {
   font-size: 12px;
   color: var(--dd-color3);
 }
-.skills .skill-items .skill-card svg{
+
+.skills .skill-items .skill-card svg {
   color: var(--dd-color3);
 }
+
 /* 
 .skills .tech-stack:hover {
   border: solid 2px var(--dd-color);
@@ -542,7 +549,8 @@ section .container {
 } */
 
 /* Projects */
-.projects, .project {
+.projects,
+.project {
   background: var(--dd-background2);
 }
 
@@ -571,50 +579,92 @@ section .container {
 .projects .card {
   flex-basis: calc(33.33% - 20px);
   background-color: transparent;
-  border-radius: 10px;
-  border: none;
+  overflow: hidden;
+  max-height: 240px;
+  position: relative;
 }
 
-.projects .card-body {
-  flex-basis: calc(33.33% - 20px);
-  padding: 20px;
-  color: var(--dd-color)
+.projects .card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 16px;
+  background: var(--dd-gray1);
+  z-index: 5;
+}
+
+.projects .card .card-ind {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: var(--dd-color2-trans);
+  border-radius: 50%;
+  top: 6px;
+  left: 10px;
+  z-index: 10;
+}
+
+.projects .card .card-ind::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: var(--dd-color2-trans);
+  border-radius: 50%;
+  top: 0;
+  left: 10px;
+  z-index: 10;
+}
+
+.projects .card .card-ind::after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: var(--dd-color2-trans);
+  border-radius: 50%;
+  top: 0;
+  left: 20px;
+  z-index: 10;
 }
 
 .projects .card-img-top {
   border-radius: 0;
 }
 
+
 .projects .card-title {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .projects .card-body {
+  flex-basis: calc(33.33% - 20px);
+  color: var(--dd-color);
   padding: 1rem;
-  background-color: var(--dd-background);
+  text-align: center;
+  background-color: transparent;
 }
 
-/* .projects .glass {
-  background: rgba(39, 39, 39, 0.2);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border: solid 1px rgba(119, 119, 119, 0.137);
+.projects .btn, .projects .btn-main {
+  background-color: unset;
+  box-shadow: unset;
+}
 
-} */
 
 .projects .img-wrapper {
-  height: 200px;
+  height: 160px;
+  border: solid 1px var(--dd-gray1);
+}
+
+.projects .card img {
+  width: 100%;
+  position: relative;
 }
 
 .projects .btn span {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   text-transform: none;
-}
-
-img:hover {
-  scale: 1.1;
 }
 
 /* Footer */
@@ -940,6 +990,7 @@ footer {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .header h1 {
     font-size: 5rem;
     line-height: 5rem;
@@ -965,10 +1016,11 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  
-.grid-container {
-  grid-template-columns: repeat(4, 1fr);
-}
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .header .cta {
     font-size: 1.4rem;
     width: 20%;
