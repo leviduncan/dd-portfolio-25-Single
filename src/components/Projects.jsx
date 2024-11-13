@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => {
       </div>
       <div className="card-body">
         <h3 className="card-title">{project.acf?.name}</h3>
-        <div className="d-flex gap-2">
+        <div className="d-flex gap-2 justify-content-between">
           {project.acf?.github
             ? <Link to={project.acf?.github} className="cta d-flex justify-content-center align-items-center" target="_blank"><FaGithub /><span>Github</span></Link>
             : ""}

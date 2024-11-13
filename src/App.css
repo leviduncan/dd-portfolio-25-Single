@@ -60,14 +60,14 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  line-height: 1.2;
+  line-height: 1.6;
   color: var(--dd-font-color);
 }
 
 a {
   color: var(--dd-2nd);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 p {
@@ -238,6 +238,7 @@ strong {
   font-size: 1rem;
   display: flex;
   justify-content: center;
+  border-radius: 8px;
   gap: 5px;
 }
 
