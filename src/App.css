@@ -567,6 +567,7 @@ section .container {
   overflow: hidden;
   max-height: 240px;
   position: relative;
+  border-radius: 8px;
 }
 
 .projects .card::before {
@@ -617,10 +618,10 @@ section .container {
   border-radius: 0;
 }
 
-
-.projects .card-title {
-  font-size: 16px;
+.projects .card:hover img {
+  scale: 1.2;
 }
+
 
 .projects .card-body {
   flex-basis: calc(33.33% - 20px);
@@ -628,6 +629,10 @@ section .container {
   padding: 1rem;
   text-align: center;
   background-color: var(--dd-color);
+}
+
+.projects .card-body .card-title {
+  font-size: 18px;
 }
 
 .projects .btn, .projects .btn-main {
@@ -638,18 +643,26 @@ section .container {
 
 
 .projects .img-wrapper {
-  height: 160px;
+  height: 180px;
 }
 
 .projects .card img {
-  width: 100%;
+  width: 105%;
   position: relative;
 }
 
-.projects .btn span {
-  font-size: 14px;
-  font-weight: 300;
-  text-transform: none;
+.projects .cta {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
+  border: solid 1px var(--dd-2nd);
+  border-radius: 8px;
+}
+
+.projects .cta:hover {
+  border: solid 1px var(--dd-background3);
+  background: var(--dd-background3);
+  color: var(--dd-color);
 }
 
 /* Footer */

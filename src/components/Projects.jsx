@@ -19,11 +19,11 @@ const ProjectCard = ({ project }) => {
         <h3 className="card-title">{project.acf?.name}</h3>
         <div className="d-flex gap-2">
           {project.acf?.github
-            ? <Link to={project.acf?.github} className="btn btn-main cta d-flex justify-content-center align-items-center" target="_blank"><FaGithub /><span>Github</span></Link>
+            ? <Link to={project.acf?.github} className="cta d-flex justify-content-center align-items-center" target="_blank"><FaGithub /><span>Github</span></Link>
             : ""}
           <Link
             to={project.acf?.web}
-            className="btn btn-main cta d-flex justify-content-center align-items-center"
+            className="cta d-flex justify-content-center align-items-center"
             target="_blank"
           >
             <FaEarthAmericas />
