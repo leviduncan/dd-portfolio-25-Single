@@ -6,7 +6,7 @@
   --dd-background3: #080008;
   --dd-gray1: #1d1d1d;
   --dd-color: #fff;
-  --dd-font-color: #ccc;
+  --dd-font-color: #efefef;
   --dd-2nd: #FB2156;
   --dd-2nd-hover: #8f0a2b;
   --dd-color2: #efe1f0;
@@ -56,9 +56,9 @@ h3 strong {
 body {
   background: linear-gradient(45deg, var(--dd-background), var(--dd-background2));
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   line-height: 1.6;
   color: var(--dd-font-color);
@@ -252,6 +252,7 @@ strong {
 
 .btn-main:hover {
   background-color: var(--dd-2nd-hover);
+  color: var(--dd-font-color);
   box-shadow: unset;
 }
 
@@ -332,7 +333,7 @@ strong {
 .navigation .fixed-top {
   top: 0;
   margin: auto;
-  background: rgba(255, 255, 255, 0.021);
+  background-color: #1b000fab;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 0;
@@ -342,6 +343,7 @@ strong {
 .navigation .fixed-top a {
   color: var(--dd-color);
   text-transform: uppercase;
+  padding: 5px;
 }
 
 .navigation .fixed-top a:hover {
@@ -421,33 +423,42 @@ section .container {
 }
 
 .about {
-  color: var(--dd-color);
-  background-color: var(--dd-background2);
+  background-color: var(--dd-color);
+}
+
+.about h3{
+  color: var(--dd-background2);
+}
+
+.about h3 strong {
+  font-weight: 700;
+  color: var(--dd-background2);
+}
+
+.about p{
+  color: var(--dd-background2);
 }
 
 .about .left {
-  background: url('./assets/Silver-Laptop.jpg');
-  background-size: cover;
   min-height: 300px;
-  position: relative;
 }
 
-.about .left:before {
-  content: "";
-  position: absolute;
-  background: #d600d61a;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 
 .about img:hover {
   scale: unset;
 }
 
-.about .content {
-  padding: 50px 0;
+.about .btn-outlined {
+  background-color: transparent;
+  color: var(--dd-background2);
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
+}
+
+.about .btn-outlined:hover {
+  background-color: var(--dd-background2);
+  color: var(--dd-font-color)
 }
 
 .portrait {
