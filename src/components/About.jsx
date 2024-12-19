@@ -10,9 +10,11 @@ const AboutContent = ({ post }) => {
             <div className="d-flex align-items-center p-5">
                 <div className="content" >
                     <h2 className="mb-3">About Me</h2>
-                    <h3 className="mb-4">Empowering <strong>Digital Excellence</strong> Through <strong>Innovative Design</strong> and <strong>Development</strong></h3>
-                    <p className="mb-3">I'm passionate about revolutionizing digital experiences by harnessing the power of cutting-edge technologies and expertise. With a strong foundation in modern web development, spanning JavaScript, HTML5, CSS3, and React, I've established myself as a trusted partner for businesses seeking to thrive in today's digital landscape.</p>
-                    <p className="mb-5">My journey began with a vision to redefine the standards of excellence in web design and development, blending intuitive user experiences with seamless technical integration. Since then, I've continuously evolved and adapted to meet the ever-changing needs of my clients, staying at the forefront of industry trends and emerging technologies.</p>
+                    <h3 className="mb-4">Crafting <strong>Exceptional</strong> Digital Experiences with <strong>Precision</strong> and <strong>Creativity</strong></h3>
+                    <p className="mb-3">I'm a front-end developer passionate about transforming ideas into impactful digital realities. Leveraging expertise in HTML5, CSS3, and JavaScript, I specialize in creating intuitive, accessible, and visually compelling web interfaces. My goal is to empower businesses with elegant, high-performance solutions that resonate with users.</p>
+                    <p className="mb-3">Over the years, I've honed my skills in modern web development, embracing emerging trends and technologies to stay ahead in the ever-evolving digital landscape. Whether collaborating with teams or leading projects, I bring dedication, adaptability, and an unwavering commitment to excellence.</p>
+                    <p className="mb-5">
+                        I believe that great design and functionality go hand in hand, and I strive to deliver results that make a lasting impression.</p>
                     <div className="btn-grp col-12 d-flex gap-3 flex-column flex-xl-row">
                         <a href="mailto:darrin@darrinduncan.com" className="d-none d-md-block btn btn-main cta" >
                             {post.acf.main_btn_label}
